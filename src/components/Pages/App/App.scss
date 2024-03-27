@@ -1,0 +1,261 @@
+@import "@default/mainVariables.scss";
+@include DefaultStyle;
+
+.TopMain {
+  padding-bottom: 7.1em;
+}
+
+.HeaderGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; // Deux colonnes, une pour la section Articles et une pour le h1
+  grid-gap: 3%; // Espace entre les colonnes
+  align-items: center; // Centrer verticalement les éléments
+  width: 100%;
+}
+
+.TitleMain {
+  font-style: normal;
+  text-align: left;
+  margin-right: 5rem;
+}
+
+.TextDivTitle {
+  font-weight: bold;
+}
+
+.StartTextH1 {
+  font-size: 2em;
+  font-style: italic;
+}
+
+.TextColorH1 {
+  font-size: 2em;
+  font-style: italic;
+  text-align: left;
+  background: linear-gradient(270deg, #fa6f0b -10.8%, #ce2bd3 110.51%);
+  background-clip: text; /* Appliquer le dégradé au texte seulement */
+  color: transparent; /* Rendre le texte transparent */
+}
+
+.EndTextH1 {
+  font-size: 1em;
+}
+
+.ButtonContinue {
+  background: linear-gradient(270deg, #fa6f0b -10.8%, #ce2bd3 110.51%);
+  color: white;
+  padding: 0.2em 1.2em;
+  text-transform: uppercase;
+  margin-top: 1em;
+  cursor: pointer;
+  width: auto;
+  border-radius: 0 0.7em 0 0.7em ; 
+  border: 0 solid transparent;
+  font-family: $text-style;
+  font-size: 1.5em;
+  transition: 0.3s ease;
+}
+
+.ButtonContinue:hover{
+  background: linear-gradient(270deg, #2f1f14 -10.8%, #959495 110.51%);
+  border-radius: 0.7em 0 0.7em 0; 
+}
+
+.DivInstagramBanner {
+  width: 100%;
+  background-color: #cccccc;
+}
+
+.InstagramBanner {
+  display: flex;
+  align-items: center;
+}
+
+.InstagramLogo {
+  margin-top: 1em;
+  margin-left: 3em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  height: 3em;
+}
+
+.LinkInstagramText {
+  text-decoration: none;
+}
+
+.InstagramText {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 0.7em; /* Supprimer la marge supérieure */
+  background: linear-gradient(270deg, #3d4384 0%, #2764b8 100%);
+  background-clip: text;
+  color: transparent;
+  height: 2em; /* Définir la hauteur */
+  text-decoration: none;
+}
+
+.TextH2Main {
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  margin-top: 2em;
+}
+
+.StartTextH2 {
+  font-size: 2em;
+}
+
+.TextColorH2 {
+  font-size: 2em;
+  background: linear-gradient(270deg, #fa6f0b -10.8%, #ce2bd3 110.51%);
+  background-clip: text; /* Appliquer le dégradé au texte seulement */
+  color: transparent; /* Rendre le texte transparent */
+}
+
+.cardContainersWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100vw;
+}
+
+.invisibleCardContainer {
+  display: flex;
+  aspect-ratio: 7/2;
+  width: 40%;
+  min-width: 300px;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+}
+.placeHolder {
+  width: 7.14%;
+  height: 100%;
+}
+.underCardContainer {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top right, #ad399b, chocolate);
+  border-radius: 2.6vw;
+}
+.cardContainer {
+  display: flex;
+  position: relative;
+  top: 3%;
+  left: 1%;
+  width: 98%;
+  height: 94%;
+}
+
+.gauche {
+  width: 7.14%;
+  height: 100%;
+  background-color: #2b376a;
+  border-radius: 2.1vw 0 0 2.1vw;
+}
+.bulle {
+  top: 25%;
+  left: -108%;
+  height: 50%;
+  aspect-ratio: 1/1;
+  position: relative;
+  background: linear-gradient(to top right, #ad399b 35%, chocolate);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  max-width: 70%;
+}
+
+.droite {
+  width: 92.86%;
+  height: 100%;
+  border-radius: 0 2.1vw 2.1vw 0;
+  background-color: #2b376a;
+  color: white;
+  /* Redimensionnement de la police d'écriture en fonction de la largeur de la div .droite */
+  font-size: calc(
+    1em + 0.2vw
+  ); /* Exemple : augmente la taille de la police d'écriture en fonction de 0.5vw */
+}
+
+.TextCardTitle {
+  padding-left: 2%;
+  padding-right: 5%;
+  padding-top: 2%;
+
+  /* Redimensionnement de la police d'écriture en fonction de la largeur de la div .droite */
+  font-size: calc(
+    1em + 0.1vw
+  ); /* Exemple : augmente la taille de la police d'écriture en fonction de 0.3vw */
+}
+
+.TextCardContent {
+  padding-top: 2%;
+
+  /* Redimensionnement de la police d'écriture en fonction de la largeur de la div .droite */
+  font-size: calc(
+    1em + 0.15vw
+  ); /* Exemple : augmente la taille de la police d'écriture en fonction de 0.2vw */
+}
+
+@media screen and (max-width: 1400px) {
+  .TopMain {
+    height: auto;
+    padding-bottom: 10em;
+  }
+}
+
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 1280px
+  @media screen and (max-width: 1280px) {
+
+  }*/
+
+// /* Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre 1024px et 1280px */
+// @media all and (min-width: 1024px) and (max-width: 1280px) {
+
+// }
+
+/* Sur tous types d'écrans orientés verticalement */
+@media all and (orientation: portrait) {
+  .HeaderGrid {
+    grid-template-columns: none;
+    grid-template-rows: auto; /* Réinitialisez la disposition des colonnes en lignes */
+  }
+
+  .TitleMain,
+  .TextColorH1 {
+    text-align: center; /* Centrer le texte à gauche */
+    font-size: 2em;
+    margin: 0;
+  }
+
+  .InstagramText {
+    font-size: 2.5em;
+  }
+
+  .TextH2Main {
+    padding-bottom: 5em;
+  }
+
+  .StartTextH2 {
+    font-size: 3.5em;
+  }
+
+  .TextColorH2 {
+    font-size: 3.5em;
+  }
+
+  .invisibleCardContainer {
+    width: 85%;
+  }
+
+  .droite {
+    font-size: calc(
+      2em + 1vw
+    );
+  }
+}

@@ -1,0 +1,38 @@
+$navbar-background-color: #219ebc;
+$header-color: #8ecae6;
+$text-color: #ffffff;
+$text-style: "Raleway";
+
+$header-text-style: "Raleway";
+
+$dark-blue25: rgba(0, 50, 90, 0.25);
+$dark-blue50: rgba(0, 50, 90, 0.5);
+
+$background-color : linear-gradient(to top right, rgb(19, 40, 69), rgb(112, 79, 165));
+
+@mixin DefaultStyle {
+    * {
+      padding: 0;
+      margin: 0;
+      scroll-padding-top: 6rem;
+    }
+  
+    :root {
+      background: $background-color;
+    }
+
+    .Content {
+      padding-top: 7.1rem; /* Ajustez selon la hauteur de votre en-tête */  
+      margin-left: 0;
+      margin-right: 0;
+      display: block;
+      font-family: $text-style;
+      font-size: 1vw;
+      text-align: center;
+      padding-bottom: 2.5rem;
+      min-height: 90vh;
+      color: white;
+      width: 100vw;
+    }
+    
+  }

@@ -1,0 +1,288 @@
+@import "@default/mainVariables.scss";
+@include DefaultStyle;
+
+/* Styles pour l'affiche de la grid sur la page Main */
+.ArticlesWrapperDiv {
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.TitleArticleWrapper {
+  font-size: 3.5em;
+  padding-bottom: 2%;
+}
+
+.ButtonArticleWrapper {
+  background: linear-gradient(270deg, #fa6f0b -10.8%, #ce2bd3 110.51%);
+  color: white;
+  padding: 0.2em 1.2em;
+  outline: 0;
+  text-transform: uppercase;
+  margin-top: 1em;
+  cursor: pointer;
+  width: auto;
+  border-top-right-radius: 0.7em;
+  border-bottom-left-radius: 0.7em;
+  border: 0 solid transparent;
+  font-family: $text-style;
+  font-size: 1.2em;
+}
+
+.LinkArticleWrapper {
+  color: white;
+  text-decoration: none;
+}
+
+.ArticlesWrapper {
+  width: 40em;
+  height: 35em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 0.7em;
+  grid-auto-rows: minmax(50em, auto);
+  padding: 0.7em;
+  
+  border-radius: 1em;
+  background: linear-gradient(to bottom, #e52e71, #ff8a00);
+  overflow: hidden;
+
+  .Art {
+    background-position: center;
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+    justify-content: center;
+    background-size: cover;
+    overflow: hidden;
+    background-color: #f2f3f5;
+  }
+
+  .Art:hover .ArtContent {
+    transform: translateY(0);
+  }
+
+  .ArtContent {
+    transform: translateY(100%);
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .Art:hover .hidden {
+    display: block;
+  }
+
+  .Art1 {
+    background-image: url(@/assets/Articles/bg-Art1.jpg);
+  }
+
+  .Art2 {
+    background-image: url(@/assets/Articles/bg-Art2.jpg);
+  }
+
+  .Art3 {
+    background-image: url(@/assets/Articles/bg-Art3.jpg);
+  }
+
+  .Art4 {
+    background-image: url(@/assets/Articles/bg-Art4.jpg);
+  }
+
+  .Art5 {
+    background-image: url(@/assets/Articles/bg-Art5.jpg);
+  }
+
+  .ArtQuiz {
+    background-image: url(@/assets/Articles/bg-Art6.jpg);
+  }
+
+  a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+  }
+
+  .ArtContent {
+    content: "";
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    color: white;
+    margin-top: 15%;
+    padding-bottom: 5em;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+    background-color: $dark-blue25;
+    width: 100%;
+
+
+    h2 {
+      font-size: 2em;
+      text-align: center;
+      text-transform: uppercase;
+      margin: 0;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      text-align: center;
+      color: rgb(236, 236, 236);
+      margin: 0;
+      font-size: 1.25em;
+    }
+  }
+
+  .Art::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $dark-blue25;
+    z-index: 1;
+  }
+
+  .Art:hover::after {
+    background-color: $dark-blue50;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .Art:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, 0.25);
+  }
+} /* Fin de la section des styles pour l'affiche de la grid sur la page Main */
+
+.TitleArticle {
+  font-size: 4em;
+  }
+
+.IntroImage, .ContentImg {
+    display: block;
+    max-width: 60%;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2em;
+    background: none;
+  }
+
+  .CategoryContentDiv {
+    margin-left: 3em;
+    margin-right: 3em;
+    background: linear-gradient(270deg, #fa6f0b -10.8%, #ce2bd3 110.51%);
+    border-radius: 20px;
+    margin-top: 1.5em;
+    margin-bottom: 3em;
+    padding-top: 0.3em; /* Dépassement en haut */
+    padding-bottom: 0.3em; /* Dépassement en bas */
+  }
+  
+  .CategoryContent {
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+    background: radial-gradient(circle, rgba(13,45,72,1) 0%, rgba(59,63,109,1) 100%);
+    padding: 1.5%;
+    border-radius: 15px;
+    color: white;
+    text-align: left;
+  }
+  
+
+  .TitleSection {
+    padding-bottom: 1%;
+    font-size: 2.5em;
+  }
+
+  .TextContentSection {
+    text-align: left;
+    font-size: 1.3em;
+  }
+
+  .ArticleList {
+    font-size: 1em;
+    list-style-type: none;
+    text-align: left;
+
+    li {
+      margin-bottom: 1em;
+      margin-left: 1.3em;
+
+    }
+  }
+
+  .ContentImg {
+    max-width: 80%;
+  }
+
+  
+    /* Style pour la balise <br> */
+    .br-margin {
+      margin-bottom: 1em; /* Vous pouvez ajuster la valeur de la marge selon vos besoins */
+    }
+
+    /* Style pour la balise <span> */
+    .span-margin {
+      margin-bottom: 1em; /* Vous pouvez ajuster la valeur de la marge selon vos besoins */
+    }
+
+
+  // /* Sur les écrans, quand la largeur de la fenêtre fait au maximum 1280px */
+  // @media screen and (max-width: 1280px) {
+
+  // }
+
+  // /* Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre 1024px et 1280px */
+  // @media all and (min-width: 1024px) and (max-width: 1280px) {
+
+  // }
+
+  /* Sur tous types d'écrans orientés verticalement */
+  @media all and (orientation: portrait) {
+
+    .ArticlesWrapperDiv {
+      margin-left: 9em;
+      margin-right: 1em;
+    }
+    .ArticlesWrapper {
+      width: 85%;
+      height: 70em;
+      grid-gap: 3em;
+      padding: 3em;
+    }
+
+    .TitleArticle {
+      font-size: 10em;
+    }
+
+    .IntroImage {
+      max-width: 90%;
+    }
+  
+    .ButtonArticleWrapper {
+      font-size: 3em;
+    }
+
+    .CategoryContentDiv {
+      padding-top: 1.5em; /* Dépassement en haut */
+      padding-bottom: 1.5em; /* Dépassement en bas */
+    }
+
+    .CategoryContent {
+      font-size: 3em;
+    }
+    
+    .TitleSection {
+      text-align: center;
+      padding-bottom: 0.5em;
+    }
+
+  }
